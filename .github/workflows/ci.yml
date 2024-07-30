@@ -1,14 +1,13 @@
 name: Build HTML
-on:
-  push:
-    branches-ignore:
-      - main
+on: [push]
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
 
