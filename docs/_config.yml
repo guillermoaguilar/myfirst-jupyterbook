@@ -2,11 +2,9 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: My sample book
-author: The Jupyter Book Community
+author: Guillermo Aguilar
 logo: logo.png
 
-# Force re-execution of notebooks on each build.
-# See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
 
@@ -14,6 +12,13 @@ execute:
 latex:
   latex_documents:
     targetname: book.tex
+
+# HTML-specific settings
+html:
+  home_page_in_navbar         : false
+
+# Interact link settings
+notebook_interface            : "notebook"
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
@@ -28,5 +33,4 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  use_issues_button: true
   use_repository_button: true
