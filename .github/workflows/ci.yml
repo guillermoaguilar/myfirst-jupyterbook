@@ -1,7 +1,12 @@
 name: Build HTML
-on: [push]
+on:
+  push:
+    branches-ignore:
+      - main
+      
 permissions:
   contents: write
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,4 +32,4 @@ jobs:
 
       - name: Build My Book
         shell: bash -l {0}
-        run: jb build dock/
+        run: jb build docs/

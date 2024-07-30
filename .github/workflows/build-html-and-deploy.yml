@@ -1,5 +1,10 @@
 name: Build HTML and Deploy to GH-PAGES
-on: [push]
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  push:
+    branches:
+      - main
 permissions:
   contents: write
 jobs:
